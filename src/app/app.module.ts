@@ -1,5 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+/**
+ * MaterialModule helps us to avoid overloading the app.module file.
+ * We will put all the material components' imports into the material.ts file
+ * And then import the MaterialModule class in order to get them.
+ */
+import { MaterialModule } from './material';
+
 
 import { AppComponent } from './app.component';
 import {TmdbService} from './tmdb.service';
@@ -44,7 +53,9 @@ import { AppRoutingModule } from './app-routing.module';
     AngularFireModule.initializeApp( environment.firebase ),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [TmdbService],
   bootstrap: [AppComponent]
