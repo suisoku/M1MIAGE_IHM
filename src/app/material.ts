@@ -3,13 +3,30 @@
  * Please put all your material components' imports inside this file.
  */
 
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { NgModule } from '@angular/core';
 
+import {
+  MatButtonModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule
+} from '@angular/material';
 
 @NgModule({
-  imports: [MatButtonModule, MatCheckboxModule],
-  exports: [MatButtonModule, MatCheckboxModule],
+  imports: [
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule
+  ],
+  exports: [
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule
+  ]
 })
-
-export class MaterialModule { }
+export class MaterialModule {}
