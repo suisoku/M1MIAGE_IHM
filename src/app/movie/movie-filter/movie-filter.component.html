@@ -1,11 +1,33 @@
 <!-- div parent-->
-<div>
+<div class="left">
   <!-- partie filtre-->
-  <div>
+  <div class="filterFather">
     <div class="filter">
-      khra
-
+      <span class="sp">
+        Filtres
+      </span>
     </div>
+    <div class="film">
+       <span class="film-span">
+        Titre
+       </span>
+      <form>
+        <mat-form-field class="film-input">
+          <input type="text"
+                 placeholder="search ..."
+                 aria-label="Films"
+                 matInput
+                 [formControl]="myControl"
+                 [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredFilms| async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+    </div>
+    <hr>
   </div>
   <!-- partie centrale-->
   <div>
