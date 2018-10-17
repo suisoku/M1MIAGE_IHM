@@ -30,6 +30,7 @@ import { MovieComponent } from './movie/movie.component';
 import { ActorComponent } from './actor/actor.component';
 import { ActorFilterComponent } from './actor/actor-filter/actor-filter.component';
 import { AppRoutingModule } from './app-routing.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,9 @@ import { AppRoutingModule } from './app-routing.module';
     AngularFireDatabaseModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [TmdbService],
   bootstrap: [AppComponent]
