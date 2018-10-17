@@ -12,19 +12,24 @@ import {
   MatMenuModule,
   MatToolbarModule,
   MatIconModule,
-  MatCardModule
+  MatCardModule,
+  MatInputModule,
+  MatAutocompleteModule
 } from '@angular/material';
 
 @NgModule({
-<<<<<<< HEAD
   imports: [
+    MatInputModule,
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatAutocompleteModule,
   ],
   exports: [
+    MatInputModule,
+    MatAutocompleteModule,
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
