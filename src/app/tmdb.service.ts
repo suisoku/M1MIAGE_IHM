@@ -16,6 +16,8 @@ function AlxToObjectString(data: Object): {[key: string]: string} {
     const v = data[k];
     res[k] = typeof v === 'string' ? v : JSON.stringify(v);
   }
+  console.log('HHHHHHHHHHHHHHHHHHHHHHHHHHHH');
+  console.log(res);
   return res;
 }
 
@@ -83,5 +85,17 @@ export class TmdbService {
     const res = await this.get<SearchTVResponse>(url, query);
     return res.body;
   }
+
+  //___________________________________________________________________________________________________________________________
+  // Trending __________________________________________________________________________________________________________________
+  // ___________________________________________________________________________________________________________________________
+  
+  //---- Editted by @HaneiSuru---
+  async trendingMedia(query: SearchTVQuery): Promise<SearchTVResponse> {
+    const url = `${tmdbApi}/trending/tv`;
+    const res = await this.get<SearchTVResponse>(url, query);
+    return res.body;
+  }
+
 
 }

@@ -1,4 +1,4 @@
-<!--  <h1>TMDB + Firebase</h1> {{user.uid}} not displayed-->
+ 
 <mat-toolbar color="primary">
   <div *ngIf="user">
     <img id="logoGoogle" [src]="user.photoURL"  />
@@ -14,8 +14,8 @@
     <mat-icon>more_vert</mat-icon> 
   </button>
   
-  
 </mat-toolbar>
+
 <mat-menu id="endMenu" x-position="before" #menu="matMenu">
   <button *ngIf="user" (click)="logout()"  mat-menu-item>Sign Off</button>
   <button mat-menu-item>Option 1</button>
@@ -37,3 +37,5 @@
   Pas encore de films à afficher...
 </section>
 
+
+<app-trending></app-trending>
