@@ -46,7 +46,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MovieFilterComponent,
     MovieComponent,
     ActorComponent,
-    ActorFilterComponent
+    ActorFilterComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +58,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [TmdbService],
   bootstrap: [AppComponent]

@@ -1,17 +1,17 @@
-export interface trendingQuery {
-  media_type: string; // default: en-US
-  query: string;
-
+export interface TrendingQuery {
+  media_type: "all" | "tv" | "person" | "movie"
+  time_window: "day" | "week"
 }
 
-export interface trendingResponse {
+export interface TrendingResponse {
   page?: number;
-  results?: MovieResult[];
-  total_results?: number;
+  results?: TrendingResult[];
   total_pages?: number;
+  total_results?: number;
 }
 
-export interface trendingResult {
+//Trending report is here to interface only a member of TrendingResponse
+export interface TrendingResult {
   poster_path?: string;
   adult?: boolean;
   overview?: string;
