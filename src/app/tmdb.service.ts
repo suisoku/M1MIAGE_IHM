@@ -13,7 +13,9 @@ import {TrendingQuery, TrendingResponse , TrendingResult} from './tmdb-data/Tren
 const tmdbApi = 'https://api.themoviedb.org/3';
 type HTTP_METHOD = 'GET' | 'POST' | 'DELETE' | 'PUT';
 
-function AlxToObjectString(data: Object): {[key: string]: string} {
+//static object type / name of object (possible parameters) / return type (could be {sss ;jsd}}) / {operations}
+function AlxToObjectString(data: Object): {[key: string]: string} 
+{
   const res = {};
   for (const k in data) {
     const v = data[k];
@@ -92,10 +94,12 @@ export class TmdbService {
   // Trending _________________ Editted by @HaneiSuru________________________________________________________________________
 
   async getTrendingMedia(query: TrendingQuery): Promise<TrendingResponse> {
-    const url = `${tmdbApi}/trending/`;
-    const res = await this.get<TrendingResponse>(url, query);
+    const url = `${tmdbApi}/trending/${query.media_type}/${query.time_window}`;
+    const res = await this.get<TrendingResponse>(url , {});
     return res.body;
   }
+
+
 
 
 }
