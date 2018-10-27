@@ -6,3 +6,16 @@
     margin-bottom:15px;
     padding-bottom: 15px;
 } */
+
+
+
+mat-card {
+  width: 15%;
+  float: left;
+  margin: 30px 0px 30px 15px;
+  cursor: pointer;
+}
+
+.example-card p {
+  font-size: 12px;
+}

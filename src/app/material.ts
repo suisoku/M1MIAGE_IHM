@@ -6,8 +6,8 @@
 
 
 import { NgModule } from '@angular/core';
-
 import {
+  MatListModule,
   MatButtonModule,
   MatMenuModule,
   MatToolbarModule,
@@ -20,6 +20,7 @@ import {
 
 @NgModule({
   imports: [
+    MatListModule,
     MatInputModule,
     MatButtonModule,
     MatMenuModule,
@@ -30,6 +31,7 @@ import {
     MatGridListModule,
   ],
   exports: [
+    MatListModule,
     MatInputModule,
     MatAutocompleteModule,
     MatButtonModule,

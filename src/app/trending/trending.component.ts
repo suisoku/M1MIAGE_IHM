@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TmdbService } from '../tmdb.service';
-import { TrendingResponse, TrendingQuery } from '../tmdb-data/TrendingSearch';
+import { TrendingResponse, TrendingQuery, TrendingResult } from '../tmdb-data/TrendingSearch';
 import { Tile } from './utilities';
 
 
@@ -55,12 +55,12 @@ export class TrendingComponent implements OnInit {
 
 
 
-  getTrendingMovies() : TrendingResponse {return this._trendsMovie;}
-  getTrendingTV() : TrendingResponse {return this._trendsTV;}
+  getTrendingMovies() : TrendingResult[] {return this._trendsMovie.results;}
+  getTrendingTV() : TrendingResult[] {return this._trendsTV.results;}
 
   getPath(path: string): string {return `https://image.tmdb.org/t/p/w500${path}`;}
 
-  fillTiles(tr : TrendingResponse){
+/*   fillTiles(tr : TrendingResponse){
     let tiles : Tile[] = [];
     tr.results.forEach(e => {
         tiles.push({imgUrl:this.getPath(e.poster_path), cols: 20 , title: e.title});
@@ -69,5 +69,5 @@ export class TrendingComponent implements OnInit {
    // console.log(tiles);
     return tiles;
     
-  }
+  } */
 }

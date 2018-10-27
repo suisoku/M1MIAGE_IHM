@@ -3,38 +3,15 @@
   <button mat-raised-button (click)="displayTrends = 'TV'" color="primary">TV</button>
 </div>
 
-<div *ngIf="getTrendingMovies() && getTrendingTV() ; else  WaitBro">
-
-  <mat-grid-list *ngIf="displayTrends == 'movie'" cols="150" >
-    <mat-grid-tile 
-      [colspan]="tileMovie.cols"
-      rowspan = "30"
-      *ngFor="let tileMovie of fillTiles(getTrendingMovies())">
-        <img [src] = "tileMovie.imgUrl"/>
-
-      <mat-grid-tile-footer rowspan = "4">{{tileMovie.title}}</mat-grid-tile-footer>
-    </mat-grid-tile>
-  </mat-grid-list>
-
-<!--   <mat-grid-list *ngIf="displayTrends == 'TV'" cols="5" >
-  [colspan]="tileMovie.cols"
-        <mat-grid-tile 
-          [colspan]="tile.cols"
-          [rowspan]="tile.rows" 
-          *ngFor="let movie of _trendsMovie.results">
-            {{movie.id}}
-        </mat-grid-tile>
-  </mat-grid-list> -->
+<div *ngIf="_trendsMovie && _trendsTV ; else  WaitBro">
+  <div *ngIf="displayTrends == 'movie'" > 
+        <mat-card *ngFor="let movie_element of getTrendingMovies()"> 
+          <img mat-card-image [src] = "getPath(movie_element.poster_path)"/>
+          <mat-card-footer>{{movie_element.title}}</mat-card-footer>
+        </mat-card> 
+  </div>
 </div>
 
 <ng-template #WaitBro>
   <p>Media Loading</p>
 </ng-template>
-
-
-
-<!-- 
-  <div *ngFor="let item of _trendsMovie.results">
-    <li>{{item.id}}</li>
-  </div>
-</div>  -->
