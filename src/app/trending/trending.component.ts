@@ -47,17 +47,12 @@ export class TrendingComponent implements OnInit {
   }
 
   //will be called on instanciation 
-  ngOnInit() {
-    /* this.tmdb.getTrendingMedia(tTVQuery)
-    .then( (tm: TrendingResponse) => { console.log("Hhh", tm) }) 
-    .catch( err => console.error('Error getting trends tv:', err)); */
-  }
+  ngOnInit() {}
 
 
 
   getTrendingMovies() : TrendingResult[] {return this._trendsMovie.results;}
   getTrendingTV() : TrendingResult[] {return this._trendsTV.results;}
-
   getPath(path: string): string {return `https://image.tmdb.org/t/p/w500${path}`;}
 
 /*   fillTiles(tr : TrendingResponse){

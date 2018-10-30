@@ -1,17 +1,26 @@
-<div class="example-button-row">
+<div class="flexInfo">
   <button mat-raised-button (click)="displayTrends = 'movie'" color="primary">Movies</button>
   <button mat-raised-button (click)="displayTrends = 'TV'" color="primary">TV</button>
 </div>
 
-<div *ngIf="_trendsMovie && _trendsTV ; else  WaitBro">
-  <div *ngIf="displayTrends == 'movie'" > 
+<main *ngIf="_trendsMovie && _trendsTV ; else  WaitBro">
+
+  <section *ngIf="displayTrends == 'movie'" > 
         <mat-card *ngFor="let movie_element of getTrendingMovies()"> 
           <img mat-card-image [src] = "getPath(movie_element.poster_path)"/>
           <mat-card-footer>{{movie_element.title}}</mat-card-footer>
         </mat-card> 
-  </div>
-</div>
+  </section>
 
-<ng-template #WaitBro>
-  <p>Media Loading</p>
+  <section *ngIf="displayTrends == 'TV'" > 
+      <mat-card *ngFor="let tv_element of getTrendingTV()"> 
+        <img mat-card-image [src] = "getPath(tv_element.poster_path)"/>
+        <mat-card-footer>{{tv_element.title}}</mat-card-footer>
+      </mat-card> 
+  </section>
+
+</main>
+
+<ng-template  #WaitBro>
+  <p class="flexInfo">Media Loading</p>
 </ng-template>
