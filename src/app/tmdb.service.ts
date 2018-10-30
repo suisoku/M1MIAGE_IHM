@@ -1,21 +1,28 @@
 import { Injectable } from '@angular/core';
-import {MovieQuery, MovieResponse} from './tmdb-data/Movie';
 import {HttpClient, HttpResponse} from '@angular/common/http';
+
+import {MovieQuery, MovieResponse} from './tmdb-data/Movie';
 import {PersonQuery, PersonResponse} from './tmdb-data/Person';
 import {SearchMovieQuery, SearchMovieResponse} from './tmdb-data/searchMovie';
 import {SearchPeopleQuery, SearchPeopleResponse} from './tmdb-data/SearchPeople';
 import {TVQuery, TVResponse} from './tmdb-data/TV';
 import {SearchTVQuery, SearchTVResponse} from './tmdb-data/SearchTV';
 
+import {TrendingQuery, TrendingResponse , TrendingResult} from './tmdb-data/TrendingSearch'
+
 const tmdbApi = 'https://api.themoviedb.org/3';
 type HTTP_METHOD = 'GET' | 'POST' | 'DELETE' | 'PUT';
 
-function AlxToObjectString(data: Object): {[key: string]: string} {
+//static object type / name of object (possible parameters) / return type (could be {sss ;jsd}}) / {operations}
+function AlxToObjectString(data: Object): {[key: string]: string} 
+{
   const res = {};
   for (const k in data) {
     const v = data[k];
     res[k] = typeof v === 'string' ? v : JSON.stringify(v);
   }
+  //console.log('HHHHHHHHHHHHHHHHHHHHHHHHHHHH');
+  //console.log(res);
   return res;
 }
 
@@ -83,5 +90,16 @@ export class TmdbService {
     const res = await this.get<SearchTVResponse>(url, query);
     return res.body;
   }
+
+  // Trending _________________ Editted by @HaneiSuru________________________________________________________________________
+
+  async getTrendingMedia(query: TrendingQuery): Promise<TrendingResponse> {
+    const url = `${tmdbApi}/trending/${query.media_type}/${query.time_window}`;
+    const res = await this.get<TrendingResponse>(url , {});
+    return res.body;
+  }
+
+
+
 
 }

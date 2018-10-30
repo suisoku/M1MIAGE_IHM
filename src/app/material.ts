@@ -6,19 +6,21 @@
 
 
 import { NgModule } from '@angular/core';
-
 import {
+  MatListModule,
   MatButtonModule,
   MatMenuModule,
   MatToolbarModule,
   MatIconModule,
   MatCardModule,
   MatInputModule,
-  MatAutocompleteModule
+  MatAutocompleteModule,
+  MatGridListModule,
 } from '@angular/material';
 
 @NgModule({
   imports: [
+    MatListModule,
     MatInputModule,
     MatButtonModule,
     MatMenuModule,
@@ -26,15 +28,18 @@ import {
     MatIconModule,
     MatCardModule,
     MatAutocompleteModule,
+    MatGridListModule,
   ],
   exports: [
+    MatListModule,
     MatInputModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule,
   ]
 })
 export class MaterialModule {}
