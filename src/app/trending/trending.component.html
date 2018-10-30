@@ -8,7 +8,7 @@
   <section *ngIf="displayTrends == 'movie'" > 
         <mat-card *ngFor="let movie_element of getTrendingMovies()"> 
           <img mat-card-image [src] = "getPath(movie_element.poster_path)"/>
-          <mat-card-footer>{{movie_element.title}}</mat-card-footer>
+          <mat-card-footer><p>{{movie_element.title}}</p></mat-card-footer>
         </mat-card> 
   </section>
 
