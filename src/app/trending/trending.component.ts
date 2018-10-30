@@ -55,6 +55,8 @@ export class TrendingComponent implements OnInit {
   getTrendingTV() : TrendingResult[] {return this._trendsTV.results;}
   getPath(path: string): string {return `https://image.tmdb.org/t/p/w500${path}`;}
 
+  
+
 /*   fillTiles(tr : TrendingResponse){
     let tiles : Tile[] = [];
     tr.results.forEach(e => {

@@ -15,12 +15,12 @@
   <section *ngIf="displayTrends == 'TV'" > 
       <mat-card *ngFor="let tv_element of getTrendingTV()"> 
         <img mat-card-image [src] = "getPath(tv_element.poster_path)"/>
-        <mat-card-footer>{{tv_element.title}}</mat-card-footer>
+        <mat-card-footer><p>{{tv_element.original_name}}</p></mat-card-footer>
       </mat-card> 
   </section>
 
 </main>
 
 <ng-template  #WaitBro>
-  <p class="flexInfo">Media Loading</p>
+  <p class="flexInfo">Media Loading</p> 
 </ng-template>

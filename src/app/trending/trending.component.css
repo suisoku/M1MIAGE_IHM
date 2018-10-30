@@ -33,3 +33,12 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
   grid-column-gap: 1% ;
 }
+
+mat-card-footer  > p{
+ margin-top: 5px;
+ font-size: 0.9em;
+}
+
+mat-card > img {
+  margin-bottom: 0px;
+}
