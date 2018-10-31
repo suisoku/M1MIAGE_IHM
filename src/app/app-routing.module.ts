@@ -4,6 +4,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {RouterModule, Routes} from '@angular/router';
 import {environment} from '../environments/environment';
 import {AppComponent} from './app.component';
+import {MovieComponent} from './movie/movie.component';
 
 
 const appRoutes: Routes = [
@@ -15,6 +16,10 @@ const appRoutes: Routes = [
   {
     path: 'welcome',
     component: AppComponent
+  },
+  {
+    path: 'films',
+    component: MovieComponent
   },
   {
     path: '**',

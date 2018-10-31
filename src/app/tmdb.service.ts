@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import {MovieQuery, MovieResponse} from './tmdb-data/Movie';
+import {Injectable} from '@angular/core';
+import {MovieGenre, MovieQuery, MovieResponse, ProductionCountry} from './tmdb-data/Movie';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {PersonQuery, PersonResponse} from './tmdb-data/Person';
 import {SearchMovieQuery, SearchMovieResponse} from './tmdb-data/searchMovie';
@@ -10,7 +10,7 @@ import {SearchTVQuery, SearchTVResponse} from './tmdb-data/SearchTV';
 const tmdbApi = 'https://api.themoviedb.org/3';
 type HTTP_METHOD = 'GET' | 'POST' | 'DELETE' | 'PUT';
 
-function AlxToObjectString(data: Object): {[key: string]: string} {
+function AlxToObjectString(data: Object): { [key: string]: string } {
   const res = {};
   for (const k in data) {
     const v = data[k];
@@ -26,13 +26,14 @@ export class TmdbService {
   private api_key: string;
 
   private async get<T>(url: string, data: Object): Promise<HttpResponse<T>> {
-    return this._http.get<T>( url, {
+    return this._http.get<T>(url, {
       observe: 'response',
       params: {...AlxToObjectString(data), api_key: this.api_key}
     }).toPromise();
   }
 
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: HttpClient) {
+  }
 
   init(key: string): this {
     this.api_key = key;
@@ -66,6 +67,31 @@ export class TmdbService {
   async searchPerson(query: SearchPeopleQuery): Promise<SearchPeopleResponse> {
     const url = `${tmdbApi}/search/person`;
     const res = await this.get<SearchPeopleResponse>(url, query);
+    return res.body;
+  }
+
+  async getPeoples(query: SearchPeopleQuery): Promise<SearchPeopleResponse[]> {
+    const url = `${tmdbApi}/search/person`;
+    const res = await this.get<SearchPeopleResponse[]>(url, query);
+    return res.body;
+  }
+
+
+  // _______________________________________________________________________________________________________________________________________
+  // Genre _______________________________________________________________________________________________________________________
+  // _______________________________________________________________________________________________________________________________________
+  async getGenre(): Promise<MovieGenre[]> {
+    const url = `${tmdbApi}/genre/movie/list`;
+    const res = await this.get<MovieGenre[]>(url, []);
+    return res.body;
+  }
+
+  // _______________________________________________________________________________________________________________________________________
+  // Countries _______________________________________________________________________________________________________________________
+  // _______________________________________________________________________________________________________________________________________
+  async getCountries(): Promise<ProductionCountry[]> {
+    const url = `${tmdbApi}/configuration/countries`;
+    const res = await this.get<ProductionCountry[]>(url, []);
     return res.body;
   }
 

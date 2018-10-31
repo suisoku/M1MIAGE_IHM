@@ -7,6 +7,10 @@ export interface MovieGenre {
   name?: string;
 }
 
+/*export interface GenreResponse {
+  genres: MovieGenre[];
+}*/
+
 export interface ProductionCompany {
   name?: string;
   id?: number;
@@ -16,7 +20,7 @@ export interface ProductionCompany {
 
 export interface ProductionCountry {
   iso_3166_1?: string;
-  name?: string;
+  english_name?: string;
 }
 
 export interface SpokenLanguage {

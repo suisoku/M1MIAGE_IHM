@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NouisliderModule } from 'ng2-nouislider';
 
 /**
  * MaterialModule helps us to avoid overloading the app.module file.
@@ -25,12 +26,12 @@ import { ManagerListComponent } from './list-details/manager-list/manager-list.c
 import { NewListComponent } from './list-details/new-list/new-list.component';
 import { ListDetailsComponent } from './list-details/list-details.component';
 import { SocialMediaComponent } from './list-details/social-media/social-media.component';
-import { MovieFilterComponent } from './movie/movie-filter/movie-filter.component';
 import { MovieComponent } from './movie/movie.component';
 import { ActorComponent } from './actor/actor.component';
 import { ActorFilterComponent } from './actor/actor-filter/actor-filter.component';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {TagInputModule} from 'ngx-chips';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     NewListComponent,
     ListDetailsComponent,
     SocialMediaComponent,
-    MovieFilterComponent,
     MovieComponent,
     ActorComponent,
     ActorFilterComponent
@@ -58,6 +58,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
+    NouisliderModule,
+    TagInputModule,
     ReactiveFormsModule
   ],
   providers: [TmdbService],
