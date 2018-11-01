@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NouisliderModule } from 'ng2-nouislider';
 
 /**
  * MaterialModule helps us to avoid overloading the app.module file.
@@ -30,7 +29,7 @@ import { MovieComponent } from './movie/movie.component';
 import { ActorComponent } from './actor/actor.component';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {TagInputModule} from 'ngx-chips';
+import {NouisliderModule} from 'ng2-nouislider';
 
 @NgModule({
   declarations: [
@@ -45,7 +44,6 @@ import {TagInputModule} from 'ngx-chips';
     SocialMediaComponent,
     MovieComponent,
     ActorComponent,
-    ActorFilterComponent
   ],
   imports: [
     BrowserModule,
@@ -57,17 +55,7 @@ import {TagInputModule} from 'ngx-chips';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     NouisliderModule,
-    TagInputModule,
-=======
->>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
-=======
->>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
-=======
->>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
     ReactiveFormsModule
   ],
   providers: [TmdbService],

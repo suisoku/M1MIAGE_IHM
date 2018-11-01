@@ -14,19 +14,7 @@ import {
   MatIconModule,
   MatCardModule,
   MatInputModule,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  MatAutocompleteModule, MatSelectModule, MatSliderModule
-=======
-  MatAutocompleteModule
->>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
-=======
-  MatAutocompleteModule
->>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
-=======
-  MatAutocompleteModule
->>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
+  MatAutocompleteModule, MatSliderModule, MatSelectModule, MatChip, MatChipsModule
 } from '@angular/material';
 
 @NgModule({
@@ -38,38 +26,22 @@ import {
     MatIconModule,
     MatCardModule,
     MatAutocompleteModule,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     MatSelectModule,
     MatSliderModule,
-    MatCardModule
-=======
->>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
-=======
->>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
-=======
->>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
-  ],
+    MatCardModule,
+    MatChipsModule
+],
   exports: [
+    MatChipsModule,
     MatInputModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     MatSelectModule,
     MatCardModule,
     MatSliderModule,
-=======
->>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
-=======
->>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
-=======
->>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
     MatCardModule
   ]
 })
