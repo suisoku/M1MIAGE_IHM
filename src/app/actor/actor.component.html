@@ -1,3 +1,63 @@
-<p>
-  actor works!
-</p>
+<!-- div parent-->
+<div>
+  <div class="left">
+    <!-- partie filtre-->
+    <div class="filterFather">
+      <div class="filter">
+      <span class="sp">
+        Filtress
+      </span>
+      </div>
+      <div class="film">
+        <span class="sous-titre">
+        Nom
+      </span>
+        <form class="example-form">
+          <mat-form-field>
+            <input class="inputSyle"
+                   type="text"
+                   aria-label="Productor name"
+                   matInput
+                   [formControl]="actorControl"
+                   (keyup)="searchAcotr(actorControl.value)"
+                   [matAutocomplete]="auto1">
+            <mat-autocomplete autoActiveFirstOption #auto1="matAutocomplete">
+              <mat-option *ngFor="let actor of actorsSearched" [value]="actor">
+                {{actor}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+        <hr>
+        <span class="sous-titre">
+        Pays
+      </span>
+        <form>
+          <mat-form-field>
+            <mat-select class="inputSyle"
+                        [formControl]="countryControl"
+                        multiple>
+              <mat-option *ngFor="let country of countries" [value]="country">
+                [{{country.iso_3166_1}}] {{country.english_name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+        <hr>
+        <span class="sous-titre">
+        Année
+    </span>
+        <nouislider [connect]="true"
+                    [min]="1980"
+                    [max]="currentYear"
+                    [step]="1"
+                    [tooltips]="[true,true]"
+                    [(ngModel)]="moviePeriodFilter"
+        ></nouislider>
+      </div>
+    </div>
+  </div>
+  <!-- partie centrale-->
+  <div>
+  </div>
+</div>

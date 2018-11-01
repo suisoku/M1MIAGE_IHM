@@ -28,7 +28,6 @@ import { ListDetailsComponent } from './list-details/list-details.component';
 import { SocialMediaComponent } from './list-details/social-media/social-media.component';
 import { MovieComponent } from './movie/movie.component';
 import { ActorComponent } from './actor/actor.component';
-import { ActorFilterComponent } from './actor/actor-filter/actor-filter.component';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TagInputModule} from 'ngx-chips';

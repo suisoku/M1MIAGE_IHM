@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {RouterModule, Routes} from '@angular/router';
 import {environment} from '../environments/environment';
-import {AppComponent} from './app.component';
 import {MovieComponent} from './movie/movie.component';
+import {TrendingComponent} from './trending/trending.component';
+import {ActorComponent} from './actor/actor.component';
 
 
 const appRoutes: Routes = [
@@ -15,11 +16,15 @@ const appRoutes: Routes = [
   },
   {
     path: 'welcome',
-    component: AppComponent
+    component: TrendingComponent
   },
   {
     path: 'films',
     component: MovieComponent
+  },
+  {
+    path: 'actors',
+    component: ActorComponent
   },
   {
     path: '**',

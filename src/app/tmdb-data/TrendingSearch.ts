@@ -1,6 +1,6 @@
 export interface TrendingQuery {
-  media_type: "all" | "tv" | "person" | "movie"
-  time_window: "day" | "week"
+  media_type: 'all' | 'tv' | 'person' | 'movie';
+  time_window: 'day' | 'week';
 }
 
 export interface TrendingResponse {
@@ -10,7 +10,7 @@ export interface TrendingResponse {
   total_results?: number;
 }
 
-//Trending report is here to interface only a member of TrendingResponse
+// Trending report is here to interface only a member of TrendingResponse
 export interface TrendingResult {
   poster_path?: string;
   adult?: boolean;

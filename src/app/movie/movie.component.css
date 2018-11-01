@@ -55,3 +55,12 @@
   border-color: black;
   margin-top: 1px;
 }
+.tags {
+  background-color: mediumaquamarine;
+}
+mat-card {
+  margin-top: 2px;
+}
+mat-chip-list {
+  background-color: white;
+}
