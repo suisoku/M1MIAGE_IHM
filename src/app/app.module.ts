@@ -57,8 +57,11 @@ import {TagInputModule} from 'ngx-chips';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
+<<<<<<< HEAD
     NouisliderModule,
     TagInputModule,
+=======
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
     ReactiveFormsModule
   ],
   providers: [TmdbService],

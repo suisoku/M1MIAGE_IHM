@@ -14,7 +14,11 @@ import {
   MatIconModule,
   MatCardModule,
   MatInputModule,
+<<<<<<< HEAD
   MatAutocompleteModule, MatSelectModule, MatSliderModule
+=======
+  MatAutocompleteModule
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
 } from '@angular/material';
 
 @NgModule({
@@ -26,9 +30,12 @@ import {
     MatIconModule,
     MatCardModule,
     MatAutocompleteModule,
+<<<<<<< HEAD
     MatSelectModule,
     MatSliderModule,
     MatCardModule
+=======
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
   ],
   exports: [
     MatInputModule,
@@ -37,9 +44,12 @@ import {
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
+<<<<<<< HEAD
     MatSelectModule,
     MatCardModule,
     MatSliderModule,
+=======
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
     MatCardModule
   ]
 })

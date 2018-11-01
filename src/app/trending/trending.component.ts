@@ -1,24 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { TmdbService } from '../tmdb.service';
-import { TrendingResponse, TrendingQuery, TrendingResult } from '../tmdb-data/TrendingSearch';
-import { Tile } from './utilities';
-
-
-
 
 @Component({
   selector: 'app-trending',
   templateUrl: './trending.component.html',
   styleUrls: ['./trending.component.css']
 })
+<<<<<<< HEAD
 
 
 
 
 // here is class
+=======
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
 export class TrendingComponent implements OnInit {
 
+  constructor() { }
 
+<<<<<<< HEAD
 
   // here is members of the class
 
@@ -67,4 +66,9 @@ export class TrendingComponent implements OnInit {
     return tiles;
 
   } */
+=======
+  ngOnInit() {
+  }
+
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
 }
