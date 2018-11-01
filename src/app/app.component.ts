@@ -29,7 +29,11 @@ export class AppComponent {
       tmdb.init('af82599daa1c8b9cef254d429ec0d436') // Clef de TMDB
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           .getMovie(13, {language: 'fr-FR'})
+=======
+          .getMovie(13)
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
 =======
           .getMovie(13)
 >>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
