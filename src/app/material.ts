@@ -15,7 +15,11 @@ import {
   MatCardModule,
   MatInputModule,
 <<<<<<< HEAD
+<<<<<<< HEAD
   MatAutocompleteModule, MatSelectModule, MatSliderModule
+=======
+  MatAutocompleteModule
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
 =======
   MatAutocompleteModule
 >>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
@@ -31,9 +35,12 @@ import {
     MatCardModule,
     MatAutocompleteModule,
 <<<<<<< HEAD
+<<<<<<< HEAD
     MatSelectModule,
     MatSliderModule,
     MatCardModule
+=======
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
 =======
 >>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
   ],
@@ -45,9 +52,12 @@ import {
     MatToolbarModule,
     MatIconModule,
 <<<<<<< HEAD
+<<<<<<< HEAD
     MatSelectModule,
     MatCardModule,
     MatSliderModule,
+=======
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
 =======
 >>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
     MatCardModule

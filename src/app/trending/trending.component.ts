@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trending.component.css']
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -67,6 +68,15 @@ export class TrendingComponent implements OnInit {
 
   } */
 =======
+  ngOnInit() {
+  }
+
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
+=======
+export class TrendingComponent implements OnInit {
+
+  constructor() { }
+
   ngOnInit() {
   }
 

@@ -58,8 +58,11 @@ import {TagInputModule} from 'ngx-chips';
     MaterialModule,
     FormsModule,
 <<<<<<< HEAD
+<<<<<<< HEAD
     NouisliderModule,
     TagInputModule,
+=======
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
 =======
 >>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
     ReactiveFormsModule

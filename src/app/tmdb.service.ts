@@ -4,6 +4,9 @@ import {MovieGenre, MovieQuery, MovieResponse, ProductionCountry} from './tmdb-d
 =======
 import { Injectable } from '@angular/core';
 import {MovieQuery, MovieResponse} from './tmdb-data/Movie';
+<<<<<<< HEAD
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
+=======
 >>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {PersonQuery, PersonResponse} from './tmdb-data/Person';
@@ -16,7 +19,11 @@ const tmdbApi = 'https://api.themoviedb.org/3';
 type HTTP_METHOD = 'GET' | 'POST' | 'DELETE' | 'PUT';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function AlxToObjectString(data: Object): { [key: string]: string } {
+=======
+function AlxToObjectString(data: Object): {[key: string]: string} {
+>>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
 =======
 function AlxToObjectString(data: Object): {[key: string]: string} {
 >>>>>>> parent of 00f93bc... Merge pull request #2 from suisoku/feature_trending
