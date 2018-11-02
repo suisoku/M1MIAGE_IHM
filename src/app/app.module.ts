@@ -30,6 +30,8 @@ import { ActorComponent } from './actor/actor.component';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NouisliderModule} from 'ng2-nouislider';
+import { MovieFilterComponent } from './movie/movie-filter/movie-filter.component';
+import { ActorFilterComponent } from './actor/actor-filter/actor-filter.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import {NouisliderModule} from 'ng2-nouislider';
     SocialMediaComponent,
     MovieComponent,
     ActorComponent,
+    MovieFilterComponent,
+    ActorFilterComponent,
   ],
   imports: [
     BrowserModule,

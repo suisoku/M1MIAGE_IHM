@@ -6,6 +6,8 @@ import {environment} from '../environments/environment';
 import {MovieComponent} from './movie/movie.component';
 import {TrendingComponent} from './trending/trending.component';
 import {ActorComponent} from './actor/actor.component';
+import {MovieFilterComponent} from './movie/movie-filter/movie-filter.component';
+import {ActorFilterComponent} from './actor/actor-filter/actor-filter.component';
 
 
 const appRoutes: Routes = [
@@ -20,11 +22,11 @@ const appRoutes: Routes = [
   },
   {
     path: 'films',
-    component: MovieComponent
+    component: MovieFilterComponent
   },
   {
     path: 'actors',
-    component: ActorComponent
+    component: ActorFilterComponent
   },
   {
     path: '**',
