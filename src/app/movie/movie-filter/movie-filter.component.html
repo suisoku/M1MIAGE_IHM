@@ -29,7 +29,9 @@
           <mat-form-field>
             <mat-select class="inputSyle"
                         [formControl]="genreControl"
-                        multiple>
+                        multiple
+                        (selectionChange)="searchMovies(title.value)"
+            >
               <mat-option *ngFor="let genre of genres" [value]="genre">
                 {{genre.name}}
               </mat-option>
@@ -63,8 +65,7 @@
         <form>
           <mat-form-field>
             <mat-select class="inputSyle"
-                        [formControl]="countryControl"
-                        multiple>
+                        [formControl]="countryControl">
               <mat-option *ngFor="let country of countries" [value]="country">
                 [{{country.iso_3166_1}}] {{country.english_name}}
               </mat-option>
@@ -76,11 +77,12 @@
         Année
     </span>
         <nouislider [connect]="true"
-                    [min]="1980"
+                    [min]="1888"
                     [max]="currentYear"
                     [step]="1"
                     [tooltips]="[true,true]"
                     [(ngModel)]="moviePeriodFilter"
+                    (change)="searchMovies(title.value)"
         ></nouislider>
         <hr>
         <span class="sous-titre">
