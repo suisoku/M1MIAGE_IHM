@@ -1,0 +1,18 @@
+<mat-toolbar class="mat-elevation-z5 toolbar">
+  <span routerLink="" class="topnav-left">
+    <img [src]="logo" class="logo-img" />
+  </span>
+  <span class="spacer"></span>
+  <nav>
+    <ul>
+      <li *ngFor="let item of navigation">
+        <a [routerLink]="[item.link]" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+          {{item.name | uppercase}}
+        </a>
+      </li>
+    </ul>
+  </nav>
+</mat-toolbar>
+
+<!-- Génération du composant selon le choix de navigation APRES le toolbar grâce à outlet.-->
+<router-outlet></router-outlet>
