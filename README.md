@@ -47,5 +47,5 @@ $ npm install
 > lists related components (Manager and Detail, Services), Pipes for filtering
 - CHOUCKCHOU & ZIANI & ROBINEAU: 
 > movie related components (Trending and SearchMovie / Actors & Actor-details), global architecture.
-- AIDARA &  & ROBINEAU : 
+- AIDARA & ROBINEAU : 
 > MovieDetails and Toolbar components.
