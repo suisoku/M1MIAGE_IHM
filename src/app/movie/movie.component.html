@@ -1,0 +1,48 @@
+<div class="banniere">
+
+</div>
+
+<section *ngIf="movie">
+  <div class="contenu parent">
+    <div class="navigation" *ngIf="movie">
+      <a routerLink="">Home ></a>
+      <a routerLink="">Films ></a>
+      <span style="font-size:11.5px">{{movieDetails.movie.original_title}}</span>
+    </div>
+    <button class="action" mat-mini-fab (click)="test()" color="primary">
+      <mat-icon>add</mat-icon>
+    </button>
+    <mat-card class="example-card imageMovie">
+      <img mat-card-image [src]="getPath(movieDetails.movie.poster_path)">
+    </mat-card>
+  </div>
+  <div class="detail">
+    <h1 class="couleurTeal">{{movieDetails.movie.original_title}}</h1>
+    <p>
+      {{movieDetails.movie.overview}}
+    </p>
+    <h2 class="couleurTeal"> Acteurs</h2>
+    <div>
+      <div *ngFor="let actor of movieDetails.crew.cast">
+        <mat-card class="credits" [routerLink]="['/acteurs', actor.id]">
+          <img mat-card-image [src]="getPath(actor.profile_path)">
+          <mat-card-content>
+            <h6>{{actor.name}}</h6>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <button mat-fab color="primary" class="next">
+        <mat-icon>forward</mat-icon>
+      </button>
+    </div>
+    <div>
+      <h2 class="couleurTeal"> Vous aimeriez peut-être aussi...</h2>
+      <section>
+        <mat-card *ngFor="let recommended of movieDetails.recommendations.results" class="recommended" [routerLink]="['/film', recommended.id]">
+          <img mat-card-image [src]="getPath(recommended.poster_path)" />
+          <mat-card-content>{{recommended.original_title || recommended.original_name}}</mat-card-content>
+        </mat-card>
+      </section>
+    </div>
+  </div>
+</section>

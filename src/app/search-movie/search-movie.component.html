@@ -1,0 +1,98 @@
+<div class="container">
+  <div class="sidenav">
+
+    <mat-form-field class="field">
+      <input matInput placeholder="Titre" [(ngModel)]="title">
+    </mat-form-field>
+
+    <mat-divider class="test"></mat-divider>
+
+    <div *ngIf="listeGenres">
+      <mat-form-field class="field">
+        <mat-select placeholder="Genre" [(ngModel)]="selectedGenre">
+          <mat-option>Aucun</mat-option>
+          <mat-option *ngFor="let genre of listeGenres" [value]="genre.id">{{genre.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <form class="example-form">
+      <mat-form-field class="field">
+        <input placeholder="Producteur" aria-label="Productor name" matInput [formControl]="productorControl" (keyup)="searchProductor(productorControl.value)"
+          [matAutocomplete]="auto1">
+        <mat-autocomplete autoActiveFirstOption #auto1="matAutocomplete">
+          <mat-option *ngFor="let productor of productorsSearched" [value]="productor">
+            {{productor}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+
+    <mat-divider></mat-divider>
+
+    <mat-form-field class="field">
+      <input matInput placeholder="Pays">
+    </mat-form-field>
+
+    
+    <mat-divider></mat-divider>
+
+    <div class="field">
+      <span class="placeHolderSlider">Année</span>
+      <nouislider [connect]="true" [min]="1888" [max]="2050" [step]="1" [tooltips]="[true,true]" [(ngModel)]="yearFilter"></nouislider>
+    </div>
+
+
+    <mat-divider></mat-divider>
+
+    <form>
+      <mat-form-field class="field">
+        <input placeholder="Acteur(s)" class="inputSyle" type="text" aria-label="Actor name" matInput [formControl]="actorControl"
+          (keyup)="searchActor(actorControl.value)" (keyup.enter)="insertInputTag()" [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let actor of actorsSearched" [value]="actor">
+            {{actor}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <mat-card>
+        <mat-chip-list>
+          <mat-chip class="tags" *ngFor="let actor of selectedActors" [removable]="true" (removed)="remove(actor)">
+            {{actor}}
+            <mat-icon matChipRemove>cancel</mat-icon>
+          </mat-chip>
+        </mat-chip-list>
+      </mat-card>
+    </form>
+  </div>
+
+  <div class="main">
+    <div class="search">
+      <input (keyup.enter)="searchMovie()" [(ngModel)]="query" class="textbox" placeholder="Search">
+      <div (click)="searchMovie()" class="button">
+        <i class="material-icons icone">search</i>
+      </div>
+    </div>
+
+    <div *ngIf="movies">
+      <button (click)="addMovie(movies)" mat-raised-button class="addList">
+        <mat-icon>add</mat-icon> Tout ajouter à la liste
+      </button>
+      <div *ngFor="let movie of searchContent.searchedMovies.results | searchFilter : searchContent:selectedGenre:yearFilter:title:productorControl.value">
+        <div class="movie-container">
+          <div class="movie-thumb"><img [src]="getPath(movie.poster_path)" /></div>
+          <div class="movie-content" [routerLink]="['/film', movie.id]">
+            <h3 class="movie-title">{{movie.original_title | uppercase}}</h3>
+            <p class="movie-overview"> {{(movie.overview.length>170)? (movie.overview | slice:0:170)+'..':(str) }} </p>
+          </div>
+          <button class="action" mat-mini-fab color="primitive" (click)="openDialog(movie)">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
