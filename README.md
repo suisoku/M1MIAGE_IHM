@@ -2,7 +2,7 @@
 
 > Projet IHM en M1 MIAGE à l'Université Grenoble Alpes
 
-> #IHM, #Conception, #Angular
+> **#IHM, #Conception, #Angular**
 
 ---
 
@@ -37,8 +37,8 @@ $ npm install
 
 
 ## Team
-- Chef de projet : *ROBINEAU* Régis
-- Devs : *AIDARA* Sidi Mohamed, *CHOUKCHOU Brahim* Zakaria, FONTAINE* Yves, *ZIANI* Nourredine
+- Chef de projet : **ROBINEAU** Régis
+- Devs : **AIDARA** Sidi Mohamed, **CHOUKCHOU Brahim** Zakaria, **FONTAINE** Yves, **ZIANI** Nourredine
 ---
 
 ## Work organization
