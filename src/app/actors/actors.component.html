@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="sidenav">
+        <mat-form-field class="field">
+            <input matInput placeholder="Nom" [(ngModel)]="name">
+        </mat-form-field>
+
+        <mat-divider></mat-divider>
+
+        <mat-form-field class="field">
+            <input matInput placeholder="Pays" [(ngModel)]="country">
+        </mat-form-field>
+
+        <mat-divider></mat-divider>
+
+        <div class="field">
+            <span class="placeHolderSlider">Année</span>
+            <nouislider [connect]="true" [min]="1918" [max]="2050" [step]="1" [tooltips]="[true,true]" [(ngModel)]="yearFilter"></nouislider>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="search">
+            <input  (keyup.enter)="searchActors()"[(ngModel)]="query" class="textbox" placeholder="Search">
+            <div (click)="searchActors()" class="button">
+                <i class="material-icons icone">search</i>
+            </div>
+        </div>
+
+        <div *ngIf="actor">
+            <section>
+                <mat-card *ngFor="let actor of actors.results | actorsFilter : name" [routerLink]="['/acteurs', actor.id]">
+                    <img mat-card-image [src]="getPath(actor.profile_path)" />
+                    <mat-card-content>{{actor.name | uppercase}}</mat-card-content>
+                </mat-card>
+            </section>
+        </div>
+    </div>
+</div>
