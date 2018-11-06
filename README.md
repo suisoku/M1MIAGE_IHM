@@ -1,27 +1,51 @@
-# TmdbM1
+# PROJET IHM : PICKMOVIE ERADICATOR
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+> Projet IHM en M1 MIAGE à l'Université Grenoble Alpes
 
-## Development server
+> #IHM, #Conception, #Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## (IMPORTANT) Filtering using Angular pipes.
+- The whole filtering system is Angular pipes-based, whatever the data is. We implemented our own custom pipes.
 
-## Build
+> Example GIF
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+**Filtering movies**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Recordit GIF](http://g.recordit.co/R8498TN8ft.gif)
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Installation
 
-## Further help
+- Clone this repo to your local machine using `https://github.com/suisoku/M1MIAGE_IHM`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Setup
+
+- After cloning the project, you will need to run:
+
+> using  npm package manager
+
+```shell
+$ npm install
+```
+
+---
+
+
+## Team
+- Chef de projet : *ROBINEAU* Régis
+- Devs : *AIDARA* Sidi Mohamed, *CHOUKCHOU Brahim* Zakaria, FONTAINE* Yves, *ZIANI* Nourredine
+---
+
+## Work organization
+
+- AIDARA & FONTAINE : 
+> lists related components (Manager and Detail, Services), Pipes for filtering
+- CHOUCKCHOU & ZIANI & ROBINEAU: 
+> movie related components (Trending and SearchMovie / Actors & Actor-details), global architecture.
+- AIDARA &  & ROBINEAU : 
+> MovieDetails and Toolbar components.
