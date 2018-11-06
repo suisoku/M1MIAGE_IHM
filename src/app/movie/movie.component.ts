@@ -32,7 +32,9 @@ export class MovieComponent implements OnInit, OnDestroy {
     this.routeSubscription.unsubscribe();
   }
 
-
+  /**
+   * Movie details retrieved after call of this method.
+   */
   loadCurrentMovie() {
     this.tmdb.getMovieDetails(this.id)
       .then((m: MovieDetails) => {

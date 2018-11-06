@@ -1,6 +1,9 @@
 import { List } from "./List";
 import { MovieResponse } from "../tmdb-data/Movie";
-
+/**
+ * IMPORTANT: We need to point out the fact that there's
+ * no database system in the app so we had to issue a mockup!
+ */
 export const LISTS_DATA: List[] = [
   {
     name: 'Ma superliste 1',

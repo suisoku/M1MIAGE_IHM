@@ -22,7 +22,10 @@ export class ActorsComponent implements OnInit {
   ngOnInit() {
     this.tmdb.init('af82599daa1c8b9cef254d429ec0d436');
   }
-
+  
+  /**
+   * Searching function after click on search button or bar.
+   */
   searchActors() {
     this.tmdb.searchPerson({query : this.query, include_adult : true})
     .then((resp: SearchPeopleResponse) => console.log("Actors: ", this.actors = resp))

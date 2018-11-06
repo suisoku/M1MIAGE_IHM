@@ -33,6 +33,9 @@ export class ManagerListComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
   
+  /**
+   * Opening dialog box
+   */
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogNewList, {
       width: '250px',
@@ -47,6 +50,10 @@ export class ManagerListComponent implements OnInit, OnDestroy {
     });
   }
 
+  /**
+   * 
+   *Deleting a list.
+   */
   deleteList(index: number){
     this.listeService.deleteList(index);
   }

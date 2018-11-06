@@ -1,6 +1,10 @@
 import {Pipe, PipeTransform } from '@angular/core';
 import { SearchPeopleResponse } from '../tmdb-data/SearchPeople';
 
+
+/**
+ * A pipe that filters the actorsResults based on his name.
+ */
 @Pipe({
     name: 'actorsFilter'
 })

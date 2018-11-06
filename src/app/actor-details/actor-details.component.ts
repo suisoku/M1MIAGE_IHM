@@ -16,10 +16,14 @@ export class ActorDetailsComponent implements OnInit, OnDestroy {
 
   constructor(private tmdb: TmdbService, private route: ActivatedRoute) { }
 
+
+  /** Subscribing to the params of route just to be able
+   * to reaload it withouy any issue.
+   */
   ngOnInit() {
     this.routeSubscription = this.route.params.subscribe((param: any) => {
       this.id = param['id'];
-      this.tmdb.init('af82599daa1c8b9cef254d429ec0d436') // Clef de TMDB
+      this.tmdb.init('af82599daa1c8b9cef254d429ec0d436')
       this.loadCurrentActor();
     });
   }
@@ -28,6 +32,7 @@ export class ActorDetailsComponent implements OnInit, OnDestroy {
     this.routeSubscription.unsubscribe();
   }
 
+  /**Loading current actor's details. */
   loadCurrentActor() {
     this.tmdb.getPersonDetails(this.id)
       .then((m: PersonDetails) => {
@@ -36,6 +41,7 @@ export class ActorDetailsComponent implements OnInit, OnDestroy {
       })
       .catch(err => console.error('Error getting movie:', err))
   }
+
   get actor(): any {
     return this.actorDetails;
   }

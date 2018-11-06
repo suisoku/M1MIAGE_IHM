@@ -26,6 +26,9 @@ export class ListDetailsComponent implements OnInit, OnDestroy {
     });
   }
 
+  /**
+   * Retrieving data from the mock-up List.
+   */
   loadList() {
     this.subscription = this.listeService.getData().subscribe(lists => 
       console.log("Liste", this.list = lists.find(a => a.name == this.name)));
@@ -39,7 +42,10 @@ export class ListDetailsComponent implements OnInit, OnDestroy {
   get myList() {
     return this.list;
   }
-
+  
+  /**
+   * For image sake.
+   */
   getPath(path: string): string {
     return this.tmdb.getPath(path);
   }

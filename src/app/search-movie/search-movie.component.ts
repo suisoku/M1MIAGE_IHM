@@ -57,6 +57,7 @@ export class SearchMovieComponent implements OnInit {
     this.listeService.getData().subscribe(list => this.lists = list);
   }
 
+
   openDialog(movie?: MovieResult, movies?: MovieResult[]): void {
     console.log("Paramètre film: ",movie)
     const dialogRef = this.dialog.open(DialogAddMovie, {
@@ -74,7 +75,9 @@ export class SearchMovieComponent implements OnInit {
     });
   }
 
-
+  /**
+   * Search for a specific Movie.
+   */
   searchMovie() {
     this.tmdb.searchMovieDetails({ query: this.query, include_adult: true })
       .then((resp) => {
@@ -87,6 +90,9 @@ export class SearchMovieComponent implements OnInit {
     this.yearFilter = null;
   }
 
+  /**
+   * Getting the genres list.
+   */
   loadGenres() {
     this.tmdb.getGenres()
       .then((g) => console.log("Genres: ", this.listeGenres = g.genres))
@@ -101,6 +107,10 @@ export class SearchMovieComponent implements OnInit {
     return this.tmdb.getPath(path);
   }
 
+  // _______________________________________________________________________________________________________________________________________
+  // Autocomplete part________________________________________________________________________________________________________________________________
+  // _______________________________________________________________________________________________________________________________________
+
   private _filter(value: string, who: string[]): string[] {
     const filterValue = value.toLowerCase();
     return who.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
@@ -111,6 +121,7 @@ export class SearchMovieComponent implements OnInit {
       credit.crew.filter(c => {
         c.job === "Producer";
         this.productorsSearched.push(c.name);
+        //Deleting duplicate
         this.productorsSearched = this.productorsSearched.filter((el, i, a) => i === a.indexOf(el))
       })
     });
@@ -121,6 +132,7 @@ export class SearchMovieComponent implements OnInit {
     this.searchContent.credits.map(credit => {
       credit.cast.map(c => {
         this.actorsSearched.push(c.name)
+        //Deleting duplicate
         this.actorsSearched = this.actorsSearched.filter((el, i, a) => i === a.indexOf(el))
       })
     });
