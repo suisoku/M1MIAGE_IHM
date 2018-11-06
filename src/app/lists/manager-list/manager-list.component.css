@@ -1,0 +1,39 @@
+.allLists {
+    margin: 3% 10%;
+    text-align: left;
+}
+
+h3 {
+    position: relative;
+    margin-top: 5%;
+    font-size: 30px;
+    color: teal;
+    font-weight: bold;
+    text-align: center;
+}
+
+.allLists .action {
+    text-align: left;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.allLists .action button {
+    margin: 5px;
+}
+
+.menu {
+    width: 10%;
+}
+
+.social {
+    width: 25px;
+    height: 25px;
+    margin-left: 2px;
+}
+
+.item {
+    cursor: pointer;
+}

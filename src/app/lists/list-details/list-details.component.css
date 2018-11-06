@@ -1,0 +1,56 @@
+.movie-container {
+    margin: 15px 0 0 10%; 
+    overflow: hidden;
+    max-height: 150px;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    position: relative;
+    width: 45%;
+    cursor: pointer;
+}
+h3 {
+    position: relative;
+    margin-top: 2%;
+    font-size: 30px;
+    color: teal;
+    font-weight: bold;
+    text-align: Left;
+    margin-left: 20px;
+}
+
+h1 {
+    position: relative;
+    font-size: 15px;
+    color: teal;
+    font-weight: bold;
+    text-align: Left;
+}
+
+.movie-thumb {
+    float: left;
+    margin-right: 5px;
+}
+
+.movie-thumb img {
+    display: block;
+    width: 100px;
+    height: 150px;
+}
+
+.movie-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.movie-overview {
+    font-size: 12px;
+    text-overflow: ellipsis;
+    max-height: 100px;
+}
+
+.action {
+  right: 5px;
+  top: 100px;
+  float: right;
+  position: absolute; 
+}

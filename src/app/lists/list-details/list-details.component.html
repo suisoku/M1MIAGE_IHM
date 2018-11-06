@@ -1,0 +1,20 @@
+<div *ngIf="myList">
+  <h3>{{list.name}}
+    <h1 *ngIf="1 >= list.movies.length">{{list.movies.length}} film</h1>
+    <h1 *ngIf="list.movies.length > 1"> {{list.movies.length}} films</h1>
+  </h3>
+  <div>
+    <button class="action" [routerLink]="['/films']" mat-raised-button color="primary">
+      <mat-icon>add</mat-icon>Ajouter un film
+    </button>
+  </div>
+  <div *ngFor="let movie of list.movies">
+    <div class="movie-container" [routerLink]="['/film', movie.id]">
+      <div class="movie-thumb"><img [src]="getPath(movie.poster_path)" /></div>
+      <div class="movie-content" >
+        <h3 class="movie-title">{{movie.original_title | uppercase}}</h3>
+        <p class="movie-overview"> {{(movie.overview.length>170)? (movie.overview | slice:0:170)+'..':(str) }} </p>
+      </div>
+    </div>
+  </div>
+</div>
