@@ -1,0 +1,77 @@
+.banniere {
+    height: 20%;
+    background-color: rgb(212, 212, 212);
+    border: 1px;
+}
+
+.contenu {
+    height: 80%;
+    background-color: rgb(230, 230, 230);
+}
+
+.parent {
+position: relative;
+top: 0;
+left: 0;
+}
+
+.navigation {
+    margin-left: 30%;
+}
+
+.navigation a {
+    font-size: 14px;
+    font-weight: bold;
+    color: teal;
+}
+
+.imageActor {
+position: absolute;
+width: 15%;
+top: -70px;
+left: 70px;
+}
+
+.credits {
+    width: 11%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 4%;
+    cursor: pointer;
+}
+.credits h6 {
+    font-size: 8px;
+    text-align: left;
+}
+
+.action {
+    position: relative;
+    top: -50px;
+    left: 22%;
+    z-index: 2;
+}
+
+.detail {
+    height : 100%;
+    display: flex;
+    margin-left: 33%;
+    flex-direction: column;
+}
+.next {
+    margin-top: 10%;
+}
+
+.couleurTeal {
+    color: teal;
+}
+
+.detail h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.detail p {
+    text-align: justify;
+    width: 80%;
+}
+

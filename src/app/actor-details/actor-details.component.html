@@ -1,0 +1,39 @@
+<div class="banniere">
+
+</div>
+
+<section *ngIf="actor">
+  <div class="contenu parent">
+    <div class="navigation" *ngIf="actor">
+      <a routerLink="">Home ></a>
+      <a routerLink="/acteurs">Acteurs ></a>
+      <span style="font-size:11.5px"> {{actorDetails.actor.name}}</span>
+    </div>
+    <mat-card class="example-card imageActor">
+      <img mat-card-image [src]="getPath(actorDetails.actor.profile_path)">
+    </mat-card>
+  </div>
+  <div class="detail">
+    <h1 class="couleurTeal">{{actorDetails.actor.name}}</h1>
+    <p>
+      {{actorDetails.actor.biography || 'Biographie indisponible'}}
+    </p>
+    <h2 class="couleurTeal"> Liste de films</h2>
+    <div *ngIf="!actorDetails.known_for.cast.length">
+      Liste de films indisponible!
+    </div>
+    <div>
+      <div *ngFor="let movie of actorDetails.known_for.cast">
+        <mat-card class="credits" [routerLink]="['/film', movie.id]">
+          <img mat-card-image [src]="getPath(movie.poster_path)">
+          <mat-card-content>
+            <h6>{{movie.original_title || movie.original_name}}</h6>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <button mat-fab color="primary" class="next">
+        <mat-icon>forward</mat-icon>
+      </button>
+    </div>
+  </div>
+</section>
